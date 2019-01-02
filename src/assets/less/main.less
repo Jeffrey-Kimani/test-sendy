@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('/fonts/Lato-Regular.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/Lato-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/Lato-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/fonts/Lato-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/Lato-Regular.svg#Lato-Regular') format('svg'); /* Legacy iOS */
+}
+
+body {
+    font-family: @font;
+    font-smooth: always;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased; // -moz-osx-font-smoothing: grayscale;
+    font-size: @font-size;
+    color: @text-color;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    // font-family: @font-bold;
+    font-weight: 800;
+}
+
+.fx-h1{
+    font-size: 32px;
+}
+.fx-h2{
+    font-size: 28px;
+}
+.fx-h3{
+    font-size: 24px;
+}
+.fx-h4 {
+    font-size: 20px;
+}
+.fx-h5 {
+    font-size: 16px;
+}
+.fx-h6{
+    font-size: 14px;
+}
+
+.fx-h1,.fx-h2,.fx-h3,.fx-h4,.fx-h5,.fx-h6{
+    font-weight: 600;
+}
+
+.fx-light {
+    font-weight: 400 !important;
+}
+.fx-small-text{
+    font-size: @small-font-size;
+}
+.fx-heading-box{
+    padding: 20px 0;
+}
+
+
+.fx-profile-image{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.fa-outline{
+    color: transparent;
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: @text-color;
+}
+.li{
+   -webkit-text-stroke-color: @white;
+}

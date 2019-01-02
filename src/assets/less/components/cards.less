@@ -1,0 +1,59 @@
+@import './../custom.less';
+
+.fx-card{
+    background: @white;
+    border: solid 1px @border-grey;
+    border-radius: @card-border-radius;
+
+    .fx-card-image{
+        width: 100%;
+        height: auto;
+    }
+    .fx-card-top{
+        border-radius: @card-border-radius @card-border-radius 0 0;
+    }
+    .fx-card-bottom{
+        border-radius: 0 0 @card-border-radius @card-border-radius;
+    }
+    .fx-card-content{
+        padding: 10px 12px;
+    }
+    .fx-card-text{
+        margin-top: 10px;
+    }
+    .fx-profile-image{
+        float: left;
+    }
+    .details{
+        float: left;
+        margin: 7px 0 0 15px;
+    }
+    .action{
+        float: left;
+        cursor: pointer;
+        margin: 0 10px;
+
+        i{
+            margin-right: 8px;
+        }
+    }
+}
+
+.fx-card-social{
+    .fx-card-top{
+        padding: 7px 12px;
+        border-bottom: solid 1px @border-grey;
+        
+        .right{
+            float: right;
+            margin: 3px 0 0 10px;
+        }
+    }
+    .fx-card-image{
+        margin: 10px 0;
+    }
+    .fx-card-bottom{
+        padding: 15px 12px;
+        border-top: solid 1px @border-grey;
+    }
+}

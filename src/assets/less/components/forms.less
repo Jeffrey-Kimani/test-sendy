@@ -1,0 +1,128 @@
+.input-icon {
+    cursor: pointer;
+    border: solid 1px @input-border-color;
+    border-radius: @input-border-radius;
+    .input-group-text {
+        background: transparent;
+        img {
+            height: 26px;
+            width: 26px;
+            border-radius: 50%;
+        }
+        i {
+            margin-top: -3px;
+            font-size: 18px;
+            padding: 0 7px;
+            color: darken(@grey, 20%);
+        }
+    }
+}
+
+.input-group {
+    border: solid 1px @input-border-color;
+    border-radius: @input-border-radius;
+    .input-group-append .input-group-text {
+        border: 0;
+    }
+    .input-group-prepend .input-group-text {
+        border: 0;
+    }
+    input {
+        border: 0;
+    }
+}
+
+input {
+    font-size: @input-font-size  !important;
+    border-color: @input-border-color  !important;
+}
+
+input:focus,
+input:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: @input-border-color  !important;
+}
+
+.input-group-text {
+    font-weight: 600;
+    font-size: @input-font-size;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    width: 17px !important;
+    height: 17px !important;
+    margin-top: 3px;
+}
+
+.f-danger {
+    border: 0;
+    background: lighten(@danger, 46%) !important;
+    border: solid 1px lighten(@danger, 25%);
+    
+    .fa{
+        color: darken(@danger,10%) !important;
+    }
+    input {
+        background: lighten(@danger, 46%) !important;
+    }
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: lighten(@danger, 17%) !important;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+    color: lighten(@danger, 17%) !important;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+    color: lighten(@danger, 17%) !important;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+    color: lighten(@danger, 17%) !important;
+    }
+}
+
+.f-warning {
+    border: 0;
+    background: lighten(@warning, 43%) !important;
+    border: solid 1px lighten(@warning, 5%);
+    
+    .fa{
+        color: darken(@warning,5%) !important;
+    }
+    input {
+        background: lighten(@warning, 43%) !important;
+    }
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: lighten(@warning, 17%) !important;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+    color: lighten(@warning, 17%) !important;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+    color: lighten(@warning, 17%) !important;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+    color: lighten(@warning, 17%) !important;
+    }
+}
+
+label{
+    font-weight: 600;
+}
+
+input.form-control{
+    font-size: 14px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: @color-placeholder !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: @color-placeholder !important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: @color-placeholder !important;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: @color-placeholder !important;
+}

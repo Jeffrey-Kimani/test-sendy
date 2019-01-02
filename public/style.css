@@ -1,0 +1,323 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?wx51b0');
+  src:  url('fonts/icomoon.eot?wx51b0#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?wx51b0') format('truetype'),
+    url('fonts/icomoon.woff?wx51b0') format('woff'),
+    url('fonts/icomoon.svg?wx51b0#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="ico-"], [class*=" ico-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-paper-plane:before {
+  content: "\e900";
+}
+.ico-mail-a:before {
+  content: "\e901";
+}
+.ico-chevron-down:before {
+  content: "\e902";
+}
+.ico-search:before {
+  content: "\e903";
+}
+.ico-search-b:before {
+  content: "\e904";
+}
+.ico-detective:before {
+  content: "\e905";
+}
+.ico-binoculars:before {
+  content: "\e906";
+}
+.ico-slash-bell:before {
+  content: "\e907";
+}
+.ico-silence:before {
+  content: "\e908";
+}
+.ico-qr-code-a:before {
+  content: "\e909";
+}
+.ico-qr-code-b:before {
+  content: "\e90a";
+}
+.ico-barcode-a:before {
+  content: "\e90b";
+}
+.ico-barcode-b:before {
+  content: "\e90c";
+}
+.ico-menu:before {
+  content: "\e90d";
+}
+.ico-all-direction:before {
+  content: "\e90e";
+}
+.ico-reply:before {
+  content: "\e90f";
+}
+.ico-internet-explorer:before {
+  content: "\e910";
+}
+.ico-chrome-light:before {
+  content: "\e911";
+}
+.ico-chrome-dark:before {
+  content: "\e912";
+}
+.ico-firefox:before {
+  content: "\e913";
+}
+.ico-safari-a:before {
+  content: "\e914";
+}
+.ico-safari-b:before {
+  content: "\e915";
+}
+.ico-devices:before {
+  content: "\e916";
+}
+.ico-apple-light:before {
+  content: "\e917";
+}
+.ico-applestore-a:before {
+  content: "\e918";
+}
+.ico-apple-dark:before {
+  content: "\e919";
+}
+.ico-android-light-a:before {
+  content: "\e91a";
+}
+.ico-android-dark:before {
+  content: "\e91b";
+}
+.ico-android-light-b:before {
+  content: "\e91c";
+}
+.ico-windows-old:before {
+  content: "\e91d";
+}
+.ico-windows-light:before {
+  content: "\e91e";
+}
+.ico-windows-dark:before {
+  content: "\e91f";
+}
+.ico-playstore:before {
+  content: "\e920";
+}
+.ico-applestore-b:before {
+  content: "\e921";
+}
+.ico-logout:before {
+  content: "\e922";
+}
+.ico-forward:before {
+  content: "\e923";
+}
+.ico-right:before {
+  content: "\e924";
+}
+.ico-left:before {
+  content: "\e925";
+}
+.ico-down:before {
+  content: "\e926";
+}
+.ico-download:before {
+  content: "\e927";
+}
+.ico-up:before {
+  content: "\e928";
+}
+.ico-chevron-up:before {
+  content: "\e929";
+}
+.ico-upload:before {
+  content: "\e92a";
+}
+.ico-chevron-right:before {
+  content: "\e92b";
+}
+.ico-chevron-left:before {
+  content: "\e92c";
+}
+.ico-notifica:before {
+  content: "\e92e";
+}
+.ico-email-send:before {
+  content: "\e92f";
+}
+.ico-mail:before {
+  content: "\e930";
+}
+.ico-user-a:before {
+  content: "\e931";
+}
+.ico-support:before {
+  content: "\e932";
+}
+.ico-user-b:before {
+  content: "\e933";
+}
+.ico-users:before {
+  content: "\e934";
+}
+.ico-home-a:before {
+  content: "\e935";
+}
+.ico-settings-a:before {
+  content: "\e936";
+}
+.ico-settings-b:before {
+  content: "\e937";
+}
+.ico-home-b:before {
+  content: "\e938";
+}
+.ico-sketch:before {
+  content: "\e939";
+}
+.ico-police-badge:before {
+  content: "\e93a";
+}
+.ico-badge-a:before {
+  content: "\e93b";
+}
+.ico-store-new:before {
+  content: "\e93c";
+}
+.ico-badge-b:before {
+  content: "\e93d";
+}
+.ico-rating:before {
+  content: "\e93e";
+}
+.ico-star-light:before {
+  content: "\e93f";
+}
+.ico-star:before {
+  content: "\e940";
+}
+.ico-dislike:before {
+  content: "\e941";
+}
+.ico-like:before {
+  content: "\e942";
+}
+.ico-heart-pulse:before {
+  content: "\e943";
+}
+.ico-heart:before {
+  content: "\e944";
+}
+.ico-instagram-dark:before {
+  content: "\e945";
+}
+.ico-instagram-light-a:before {
+  content: "\e946";
+}
+.ico-instagram-light-b:before {
+  content: "\e947";
+}
+.ico-twitter-dark:before {
+  content: "\e948";
+}
+.ico-twitter-light:before {
+  content: "\e949";
+}
+.ico-facebook-light:before {
+  content: "\e94a";
+}
+.ico-facebook-dark:before {
+  content: "\e94b";
+}
+.ico-google-plus-light:before {
+  content: "\e94c";
+}
+.ico-google-plus-dark:before {
+  content: "\e94d";
+}
+.ico-hacker:before {
+  content: "\e94e";
+}
+.ico-locked:before {
+  content: "\e94f";
+}
+.ico-unlocked:before {
+  content: "\e950";
+}
+.ico-warning:before {
+  content: "\e951";
+}
+.ico-shield:before {
+  content: "\e952";
+}
+.ico-cancel-a:before {
+  content: "\e953";
+}
+.ico-cancel-b:before {
+  content: "\e954";
+}
+.ico-upload-b:before {
+  content: "\e955";
+}
+.ico-cloud-a:before {
+  content: "\e957";
+}
+.ico-cloud-b:before {
+  content: "\e958";
+}
+.ico-database:before {
+  content: "\e959";
+}
+.ico-server-a:before {
+  content: "\e95a";
+}
+.ico-wallet-a:before {
+  content: "\e95b";
+}
+.ico-wallet-b:before {
+  content: "\e95c";
+}
+.ico-receipt:before {
+  content: "\e95d";
+}
+.ico-visa-box:before {
+  content: "\e95e";
+}
+.ico-visa:before {
+  content: "\e95f";
+}
+.ico-mastercard:before {
+  content: "\e960";
+}
+.ico-mastercard-box:before {
+  content: "\e961";
+}
+.ico-paypal-box:before {
+  content: "\e962";
+}
+.ico-paypal:before {
+  content: "\e963";
+}
+.ico-calendar:before {
+  content: "\e964";
+}
