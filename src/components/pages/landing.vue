@@ -34,8 +34,8 @@
                 },
                 showCard: true,
                 map: {},
-                numDeltas:100,
-                delay:10, //milliseconds
+                numDeltas:5000,
+                delay:0, //milliseconds
                 i:0,
                 deltaLat: 0,
                 deltaLng: 0,
@@ -77,15 +77,29 @@
                     const l = locations[i];
                     
                     setTimeout(() => {
-                        console.log('Moving ' + i+ ' ' + (locations.length - 1))
-                        _this.setMarker('',locations[i])
-
-                        if(i === (locations.length - 1) ){
-                            Console.log('Reastarting Moveent')
-                            _this.moveMarkers();
-                        }
+                        // var marker = new SlidingMarker({
+                        //     position: myLatlng,
+                        //     map: map,
+                        //     title: "I'm sliding marker",
+                        //     duration: 5000,
+                        //     easing: "easeOutExpo"
+                        // });
+                        this.marker.setPosition( new google.maps.LatLng(l[0], l[1]));
                     }, i * 5000);
                 }
+            },
+            rotateMarker(icon, deg){
+                console.log('rotating')
+                $(`img[src*="sendy"]`).css(
+                    {'-webkit-transform' : 'rotate('+ deg +'deg)',
+                    '-moz-transform' : 'rotate('+ deg +'deg)',
+                    '-ms-transform' : 'rotate('+ deg +'deg)',
+                    'transform' : 'rotate('+ deg +'deg)'});
+                // $(`img[src*="sendy"]`).css(
+                //     {'-webkit-transform' : 'rotate('+ deg +'deg)',
+                //     '-moz-transform' : 'rotate('+ deg +'deg)',
+                //     '-ms-transform' : 'rotate('+ deg +'deg)',
+                //     'transform' : 'rotate('+ deg +'deg)'}); 
             },
             initializeMap(){
                 var _this = this, marker, positions = [];
@@ -183,55 +197,76 @@
 
                 var position = new google.maps.LatLng(-1.300355,36.773850);
                 bounds.extend(position);
+                var locations = [
+                    [-1.300355, 36.773850],
+                    [-1.300184, 36.776811],
+                    [-1.299840, 36.779386],
+                    [-1.298897, 36.779407],
+                    [-1.299004, 36.777841],
+                    [-1.298982, 36.776811],
+                    [-1.297459, 36.776747],
+                    [-1.296193, 36.776726],
+                    [-1.296097, 36.779236],
+                    [-1.296151, 36.777637],
+                    [-1.296215, 36.776693],
+                    [-1.294252, 36.776586],
+                    [-1.294048, 36.776790],
+                    [-1.293973, 36.779118],
+                    [-1.292622, 36.779075],
+                    [-1.291844, 36.779049],
+                    [-1.291879, 36.778389]
+                ]
 
-                var image = {
-                    url: 'https://images.sendyit.com/web_platform/vendor_type/top/2.svg',
-                    // This marker is 20 pixels wide by 32 pixels high.
-                    size: new google.maps.Size(60, 80),
-                    // The origin for this image is (0, 0).
-                    origin: new google.maps.Point(0, 0),
-                    // The anchor for this image is the base of the flagpole at (0, 32).
-                    anchor: new google.maps.Point(0, 32)
-                };
-                marker = new google.maps.Marker({
-                    position: position,
-                    map: _this.map,
-                    title:'Hello',
-                    pos: [-1.300355, 36.773850]
-                    // icon: image
-                });
-
-                _this.markers.push({
-                    id: 'KBA 234A',
-                    pos: [-1.300355, 36.773850],
-                    marker: marker
-                })
-
-                // positions.push(marker);
-                _this.marker = marker
-                marker.setIcon('/img/bus-yellow.svg');
-                var markerCluster = new MarkerClusterer(_this.map, positions, {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-
-                _this.moveMarkers()
-            },
-            transition(result,position){
-                this.i = 0;
-                this.deltaLat = (result[0] - position[0])/this.numDeltas;
-                this.deltaLng = (result[1] - position[1])/this.numDeltas;
-                this.moveMarker(position);
-            },
-            moveMarker(position){
-                // Moving Marker
-                var _this = this
-                position[0] += this.deltaLat;
-                position[1] += this.deltaLng;
-                var latlng = new google.maps.LatLng(position[0], position[1]);
-                this.marker.setTitle("Latitude:"+position[0]+" | Longitude:"+position[1]);
-                this.marker.setPosition(latlng);
-                if(this.i!=this.numDeltas){
-                    this.i++;
-                    setTimeout(this.moveMarker(position), this.delay);
+                var icon = {
+                    // url: 'https://images.sendyit.com/web_platform/vendor_type/top/2.svg',
+                    // url: '/img/bus-yellow.svg',
+                    url: '/img/sendy.png',
+                    scaledSize: new google.maps.Size(40, 40), // scaled size
+                    origin: new google.maps.Point(0,0), // origin
+                    anchor: new google.maps.Point(0, 0)
+                    // path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+                    // scale: -5
+                    // url: RotateIcon
+                    //         .makeIcon(
+                    //             '/img/sendy.png')
+                    //         .setRotation({deg: 92})
+                    //         .getUrl()
                 }
+
+                marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(locations[0][0], locations[0][1]),
+                    map: _this.map,
+                    title:'Sendy Vehicle',
+                    duration: 6000,
+                    pos: [-1.300355, 36.773850],
+                    easing: "linear",
+                    // icon: icon
+                });
+                var heading = google.maps.geometry.spherical.computeHeading(new google.maps.LatLng(locations[0][0], locations[0][1]),new google.maps.LatLng(locations[1][0], locations[1][1]));
+                // icon.rotation = heading;
+                marker.setIcon(icon);
+                setTimeout(() => {
+                    this.rotateMarker('sendy',heading)
+                }, 800);
+
+
+                for (let i = 1; i < locations.length; i++) {
+                    const l = locations[i];
+                    
+                    
+                    setTimeout(() => {
+                        console.log(new google.maps.LatLng(locations[i-1][0], locations[i-1][1]),new google.maps.LatLng(l[0], l[1]))
+                        var heading = google.maps.geometry.spherical.computeHeading(new google.maps.LatLng(locations[i-1][0], locations[i-1][1]),new google.maps.LatLng(l[0], l[1]));
+                        setTimeout(() => {
+                            this.rotateMarker('sendy',heading)
+                        }, 400);
+                        // icon.rotation = heading;
+                        marker.setIcon(icon);
+                        marker.setPosition(new google.maps.LatLng(l[0], l[1]));
+                    }, i * 5000);
+                }
+
+                // _this.moveMarkers()
             }
         },
         mounted(){
